@@ -3,11 +3,8 @@ from string import ascii_uppercase
 
 class Robot(object):
     def __init__(self):
-        self.__name__()
-
-    def __name__(self):
-        self.name = f"{''.join(random.sample(ascii_uppercase, 2))}{random.randrange(100,999)}"
+        self.reset()
 
     def reset(self):
         random.seed()
-        self.__name__()
+        self.name = f"{''.join(random.sample(ascii_uppercase, 2))}{random.randrange(100,999)}"
