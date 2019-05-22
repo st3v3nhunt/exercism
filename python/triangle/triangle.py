@@ -1,17 +1,19 @@
+def valid_triangle(func):
+    def wrapper(*args):
+        valid = (min(*args) > 0 and sum(sorted(*args)[:2]) >= max(*args))
+        return valid if not valid else func(*args)
+
+    return wrapper
+
+
+@valid_triangle
 def is_equilateral(sides):
-    valid = valid_triangle(sides)
-    return valid if not valid else len(set(sides)) == 1
+    return len(set(sides)) == 1
 
-
+@valid_triangle
 def is_isosceles(sides):
-    valid = valid_triangle(sides)
-    return valid if not valid else len(set(sides)) <= 2
+    return len(set(sides)) <= 2
 
-
+@valid_triangle
 def is_scalene(sides):
-    valid = valid_triangle(sides)
-    return valid if not valid else len(set(sides)) == 3
-
-
-def valid_triangle(sides):
-    return min(sides) > 0 and sum(sorted(sides)[:2]) >= max(sides)
+    return len(set(sides)) == 3
