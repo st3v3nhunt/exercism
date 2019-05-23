@@ -1,7 +1,7 @@
 def valid_triangle(func):
-    def wrapper(*args):
-        valid = (min(*args) > 0 and sum(sorted(*args)[:2]) >= max(*args))
-        return valid if not valid else func(*args)
+    def wrapper(sides):
+        valid = (min(sides) > 0 and sum(sorted(sides)[:2]) >= max(sides))
+        return valid if not valid else func(sides)
 
     return wrapper
 
