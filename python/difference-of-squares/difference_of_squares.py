@@ -3,7 +3,7 @@ def square_of_sum(count):
 
 
 def sum_of_squares(count):
-    return sum([x**2 for x in range(count+1)])
+    return sum(x**2 for x in range(count+1))
 
 
 def difference(count):
