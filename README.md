@@ -1,4 +1,4 @@
-# Exercism exercises from [https://exercism.io/](https://exercism.io/)
+# Exercism exercises from [exercism.io](https://exercism.io/)
 
 ## Python track
 
