@@ -4,22 +4,11 @@ pub fn brackets_are_balanced(string: &str) -> bool {
     for c in string.chars() {
         // println!("char: {}, vec: {:?}", c, stack);
         match c {
-            '[' | '{' | '(' => stack.push(c),
-            ']' => {
-                if stack.pop() != Some('[') {
-                    return false;
-                }
-            }
-            '}' => {
-                if stack.pop() != Some('{') {
-                    return false;
-                }
-            }
-            ')' => {
-                if stack.pop() != Some('(') {
-                    return false;
-                }
-            }
+            // push the closing bracket so pop comparison is simpler
+            '[' => stack.push(']'),
+            '{' => stack.push('}'),
+            '(' => stack.push(')'),
+            ']' | '}' | ')' if stack.pop() != Some(c) => return false,
             _ => (),
         }
     }
