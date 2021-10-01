@@ -26,13 +26,11 @@ func Hey(remark string) string {
 		return "Fine. Be that way!"
 	}
 
-	// fmt.Printf("remark: '%s'\n", remark)
 	question := remark[len(remark)-1:] == "?"
 	yelling := strings.ToUpper(remark) == remark
 	letters := letters(remark)
 	addressed := strings.Contains(remark, "Bob")
 
-	// if letters {
 	if letters && question && yelling {
 		return "Calm down, I know what I'm doing!"
 	}
@@ -45,9 +43,5 @@ func Hey(remark string) string {
 	if letters && addressed {
 		return "Fine. Be that way!"
 	}
-	// }
-	// if question {
-	// return "Sure."
-	// }
 	return "Whatever."
 }
