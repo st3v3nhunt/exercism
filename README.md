@@ -1,6 +1,13 @@
 # Exercism exercises from [exercism.io](https://exercism.io/)
 
+## Go track
+
+[README](./go/README.md)
+
 ## Python track
 
-Using [pytest-watch](https://pypi.org/project/pytest-watch/) the tests can be
-run continually. From `./python/` dir run `ptw` for continuous test running.
+[README](./python/README.md)
+
+## Rust track
+
+[README](./rust/README.md)
